@@ -28,4 +28,4 @@ A side project: ~5,000 films in a 3D space whose axes are how a movie feels rath
 
 Java · Python · WPILib · PhotonVision · NumPy / pandas / scikit-learn · Git
 
-📫 jander6364@gmail.com · [LinkedIn](https://www.linkedin.com/in/jander6364/)
+📫 jander6364@gmail.com · [LinkedIn](https://www.linkedin.com/in/jander6364/) · [LeetCode](https://leetcode.com/u/jander6364/)
