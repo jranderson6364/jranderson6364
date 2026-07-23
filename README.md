@@ -2,6 +2,12 @@
 
 Incoming Electrical Engineering student at Stanford ('30). I write control software for machines that get one attempt, in front of a crowd, with no chance to redeploy.
 
+<p>
+  <a href="mailto:jander6364@gmail.com"><img src="https://img.shields.io/badge/Email-2B2B2B?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
+  <a href="https://www.linkedin.com/in/jander6364/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
+  <a href="https://leetcode.com/u/jander6364/"><img src="https://img.shields.io/badge/LeetCode-2B2B2B?style=flat-square&logo=leetcode&logoColor=FFA116" alt="LeetCode" /></a>
+</p>
+
 ### FRC 5531 Orange Crush — software lead, 2023–2026
 
 Three years on the team. I owned the entire 2026 robot codebase: a 200 Hz control loop across ten subsystems and six operating modes, arbitrated by a central state machine so nothing could issue conflicting commands. Java, WPILib, CTRE Phoenix 6, PhotonVision, PathPlanner.
@@ -25,9 +31,16 @@ A competitive Pokémon TCG agent for the Kaggle competition run by The Pokémon 
 
 A side project: ~5,000 films in a 3D space whose axes are how a movie feels rather than what it's about, doubling as a recommender. Learned axes (ridge regression over tag-genome and embedding features) and a three-channel reciprocal-rank fusion, precomputed in Python and served as static JSON to a three.js front end.
 
+### Right now
+
+- Pushing the self-play agent for **PkmnTCGAI** before the ladder locks in August
+- Working through Stroustrup's *A Tour of C++*
+- Linear algebra ahead of Stanford's Math 51 sequence
+- Competitive programming on Codeforces
+
 ### Skills
 
-**Languages** — Java · Python · JavaScript
+<p><img src="https://skillicons.dev/icons?i=java,python,js,sklearn,threejs,git,raspberrypi" alt="Java, Python, JavaScript, scikit-learn, three.js, Git, Raspberry Pi" /></p>
 
 **Control** — PID · feedforward · motion profiling · state machines · system identification · real-time loops
 
@@ -35,6 +48,8 @@ A side project: ~5,000 films in a 3D space whose axes are how a movie feels rath
 
 **ML / data** — scikit-learn · NumPy · pandas · regression · embeddings
 
-**Tools** — WPILib · CTRE Phoenix 6 · PhotonVision · PathPlanner · NetworkTables · three.js · Git
+**Tools** — WPILib · CTRE Phoenix 6 · PhotonVision · PathPlanner · NetworkTables · Git
 
-📫 jander6364@gmail.com · [LinkedIn](https://www.linkedin.com/in/jander6364/) · [LeetCode](https://leetcode.com/u/jander6364/)
+### Away from a keyboard
+
+Varsity track and cross country, coaching youth track, and street photography around Detroit.
