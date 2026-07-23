@@ -14,7 +14,7 @@ A competitive Pokémon TCG agent for the Kaggle × The Pokémon Company × HEROZ
 
 **FRC 5531 Orange Crush** — software lead, 2023–2026
 
-Sole programmer for two years, then built and mentored a programming subteam. Closed-loop control in Java/WPILib for a turret, hood, and flywheel shooter; a vision pipeline fusing Limelight MegaTag2 pose estimates into the swerve drivetrain's pose estimator, including the trigonometry to correct for a camera riding a continuously rotating turret; a ballistics model fitting polynomial curves to live calibration data (R²-checked, unit-tested) to turn shot distance into actuator setpoints; and a centralized state machine so six subsystems couldn't fight each other.
+Sole programmer for two years, then began teaching and mentoring other programmers. Closed-loop control in Java/WPILib for a turret, hood, and flywheel shooter; a vision pipeline fusing Limelight MegaTag2 pose estimates into the swerve drivetrain's pose estimator, including the trigonometry to correct for a camera riding a continuously rotating turret; a ballistics model fitting polynomial curves to live calibration data (R²-checked, unit-tested) to turn shot distance into actuator setpoints; and a centralized state machine so six subsystems couldn't fight each other.
 
 ### Tools I reach for
 
