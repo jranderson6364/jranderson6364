@@ -1,23 +1,31 @@
 ## Jason Anderson
 
-Incoming Electrical Engineering student at Stanford ('30). I build systems that have to hold up against something real — a robot on a competition field, an opponent across a table, a dataset that won't cooperate.
+Incoming Electrical Engineering student at Stanford ('30). I write control software for machines that get one attempt, in front of a crowd, with no chance to redeploy.
 
-### What I'm working on
+### FRC 5531 Orange Crush — software lead, 2023–2026
 
-**[Sage](https://github.com/jranderson6364/sage)** · **[live demo →](https://jranderson6364.github.io/sage/)**
+Three years on the team, two of them as its only programmer. I owned the entire 2026 robot codebase: a 200 Hz control loop across ten subsystems and six operating modes, arbitrated by a central state machine so nothing could issue conflicting commands. Java, WPILib, CTRE Phoenix 6, PhotonVision, PathPlanner.
 
-An interactive 3D map of ~5,000 movies that doubles as a recommender. The axes are how a film *feels* — levity, threat, intimacy — not what it's about. I learned them with ridge regression over 1,128 MovieLens tag-genome dimensions plus story and review embeddings, trained on 279 hand-scored films and reported on 104 held out: Spearman .86 / .88 / .76, up from .83 / .81 / .69 for a hand-tuned baseline. Recommendations are a weighted reciprocal-rank fusion of three channels — story embeddings, tag genome, and implicit-ALS audience factors. Everything is precomputed in Python and shipped as static JSON to a three.js front end, so there's no backend to run.
+The parts I'd want to talk about:
 
-**[PkmnTCGAI](https://github.com/jranderson6364/PkmnTCGAI)**
+- **Shooting while driving.** The turret leads the target by projected flight time and compensates for the lag between a rotating chassis and a turret PID that can't quite keep up.
+- **A turret that can't spin all the way around.** Cable routing left a 49° arc the turret physically cannot cross. Rather than give up the shot, the code clamps the turret to its nearest limit and feeds a rotation command into the drivetrain, so the robot turns itself until the target is reachable again.
+- **Trusting vision without being fooled by it.** Two PhotonVision coprocessors run AprilTag pose estimation into the drivetrain's Kalman filter. Measurements are rejected on seven conditions (spin rate, latency, off-field poses, two tag-distance gates, single-tag ambiguity, gyro disagreement); survivors are weighted by distance to the nearest tag. The turret camera moves with the turret, so its pose in robot space is recomputed every loop.
+- **Failing gracefully.** A debounced stall detector catches an intake drawing duty but not spinning, then bumps the pivot to shake the jam loose. Turret, hood, and flywheel error map to a green/yellow/red readout so the driver never fires before the mechanisms converge.
+- **Tooling.** SysId characterization for feedforward constants, a polynomial shooting model fit to measured range data with live R², ~40 telemetry channels logged for post-match review, and a manual mode that drives any mechanism from a NetworkTables browser.
 
-A competitive Pokémon TCG agent for the Kaggle × The Pokémon Company × HEROZ × Matsuo Institute AI Battle Challenge. A heuristic agent is on the ladder now; a self-play, search-trained version is in progress. Every version change is gated by a self-play A/B harness with Wilson 95% confidence intervals, so "better" means measured rather than assumed.
+*(Team repo is private. Happy to walk through the code.)*
 
-**FRC 5531 Orange Crush** — software lead, 2023–2026
+### [PkmnTCGAI](https://github.com/jranderson6364/PkmnTCGAI)
 
-Sole programmer for two years, then began teaching and mentoring other programmers. Closed-loop control in Java/WPILib for a turret, hood, and flywheel shooter; a vision pipeline fusing Limelight MegaTag2 pose estimates into the swerve drivetrain's pose estimator, including the trigonometry to correct for a camera riding a continuously rotating turret; a ballistics model fitting polynomial curves to live calibration data (R²-checked, unit-tested) to turn shot distance into actuator setpoints; and a centralized state machine so six subsystems couldn't fight each other.
+A competitive Pokémon TCG agent for the Kaggle competition run by The Pokémon Company, HEROZ, and the Matsuo Institute. A heuristic agent is on the ladder; a self-play, search-trained version is in progress. Nothing ships until it beats the previous version in an A/B harness with Wilson 95% confidence intervals.
+
+### [Sage](https://github.com/jranderson6364/sage) · [live demo](https://jranderson6364.github.io/sage/)
+
+A side project: ~5,000 films in a 3D space whose axes are how a movie feels rather than what it's about, doubling as a recommender. Learned axes (ridge regression over tag-genome and embedding features) and a three-channel reciprocal-rank fusion, precomputed in Python and served as static JSON to a three.js front end.
 
 ### Tools I reach for
 
-Python · Java · NumPy / pandas / scikit-learn · sentence-transformers · three.js · Git
+Java · Python · WPILib · PhotonVision · NumPy / pandas / scikit-learn · Git
 
 📫 jander6364@gmail.com · [LinkedIn](https://www.linkedin.com/in/jander6364/)
