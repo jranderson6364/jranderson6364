@@ -1,9 +1,19 @@
+## Jason Anderson
+
+Incoming Electrical Engineering student at Stanford ('30). I write control software for machines that get one attempt, in front of a crowd, with no chance to redeploy.
+
 ### FRC 5531 Orange Crush — software lead, 2023–2026
 
+Three years on the team. I owned the entire 2026 robot codebase: a 200 Hz control loop across ten subsystems and six operating modes, arbitrated by a central state machine so nothing could issue conflicting commands. Java, WPILib, CTRE Phoenix 6, PhotonVision, PathPlanner.
+
+The parts I'd want to talk about:
+
+- **Sole programmer for two years.** Control, vision, autonomy, and driver tooling were all mine to build, and all mine to debug the night before a competition. In my last season I stopped being the only person who could fix the robot and started teaching the programmers who came after me.
 - **Shooting while driving.** The turret leads the target by projected flight time and compensates for the lag between a rotating chassis and a turret PID that can't quite keep up.
+- **A shooting model fit from measured shots, not from physics.** Projectile equations don't survive contact with a real game piece, so rather than derive the trajectory I drove the robot to known distances, hand-tuned hood angle and flywheel RPM until shots scored, and fit a quadratic through the recorded points across roughly 1–6 m. Range goes in, hood angle and RPM come out. R² is published live to the driver station, so a bad fit shows up as a number before it shows up as a miss. A second model with a flatter curve handles passing.
 - **A turret that can't spin all the way around.** Cable routing left a 49° arc the turret physically cannot cross. Rather than give up the shot, the code clamps the turret to its nearest limit and feeds a rotation command into the drivetrain, so the robot turns itself until the target is reachable again.
 - **Trusting vision without being fooled by it.** Two PhotonVision coprocessors run AprilTag pose estimation into the drivetrain's Kalman filter. Measurements are rejected on seven conditions (spin rate, latency, off-field poses, two tag-distance gates, single-tag ambiguity, gyro disagreement); survivors are weighted by distance to the nearest tag. The turret camera moves with the turret, so its pose in robot space is recomputed every loop.
-- **Tooling.** SysId characterization for feedforward constants, a polynomial shooting model fit to measured range data with live R², ~40 telemetry channels logged for post-match review, and a manual mode that drives any mechanism from a NetworkTables browser.
+- **Tooling.** SysId characterization for feedforward constants, ~40 telemetry channels logged for post-match review, and a manual mode that drives any mechanism from a NetworkTables browser.
 
 *(Team repo is private. Happy to walk through the code.)*
 
