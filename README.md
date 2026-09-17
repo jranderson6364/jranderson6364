@@ -1,11 +1,10 @@
 ## Jason Anderson
 
-Incoming Electrical Engineering student at Stanford ('30). I write control software for machines that get one attempt, in front of a crowd, with no chance to redeploy.
+Incoming Electrical Engineering student at Stanford ('30). I write control software for machines and bring ideas into reality.
 
 <p>
   <a href="mailto:jander6364@gmail.com"><img src="https://img.shields.io/badge/Email-2B2B2B?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
   <a href="https://www.linkedin.com/in/jander6364/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://leetcode.com/u/jander6364/"><img src="https://img.shields.io/badge/LeetCode-2B2B2B?style=flat-square&logo=leetcode&logoColor=FFA116" alt="LeetCode" /></a>
 </p>
 
 ### FRC 5531 Orange Crush — software lead, 2023–2026
