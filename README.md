@@ -1,6 +1,6 @@
 ## Jason Anderson
 
-Incoming Electrical Engineering student at Stanford ('30). I write control software for machines and bring ideas into reality.
+Electrical Engineering student at Stanford ('30).
 
 <p>
   <a href="mailto:jander6364@gmail.com"><img src="https://img.shields.io/badge/Email-2B2B2B?style=flat-square&logo=gmail&logoColor=white" alt="Email" /></a>
