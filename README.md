@@ -11,7 +11,7 @@ Electrical Engineering student at Stanford ('30).
 
 Three years on the team. I owned the entire 2026 robot codebase: a 200 Hz control loop across ten subsystems and six operating modes, arbitrated by a central state machine so nothing could issue conflicting commands. Java, WPILib, CTRE Phoenix 6, PhotonVision, PathPlanner.
 
-The parts I'd want to talk about:
+
 
 - **Sole programmer for two years.** Control, vision, autonomy, and driver tooling were all mine to build and all mine to debug the night before a competition. In my last season I trained the programmers who replaced me.
 - **Shooting while driving.** The turret leads the target by projected flight time and corrects for the lag of a turret PID chasing a rotating chassis.
