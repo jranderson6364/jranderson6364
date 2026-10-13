@@ -30,13 +30,6 @@ A competitive Pokémon TCG agent for the Kaggle competition run by The Pokémon 
 
 A side project: ~5,000 films in a 3D space whose axes are how a movie feels rather than what it's about, doubling as a recommender. Learned axes (ridge regression over tag-genome and embedding features) and a three-channel reciprocal-rank fusion, precomputed in Python and served as static JSON to a three.js front end.
 
-### Right now
-
-- Pushing the self-play agent for **PkmnTCGAI** before the ladder locks in August
-- Working through Stroustrup's *A Tour of C++*
-- Linear algebra ahead of Stanford's Math 51 sequence
-- Competitive programming on Codeforces
-
 ### Skills
 
 <p><img src="https://skillicons.dev/icons?i=java,python,js,sklearn,threejs,git,raspberrypi" alt="Java, Python, JavaScript, scikit-learn, three.js, Git, Raspberry Pi" /></p>
